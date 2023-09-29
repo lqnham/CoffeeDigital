@@ -44,6 +44,8 @@ export PATH=$PATH:/Users/lqnham/Library/Java/JavaVirtualMachines/corretto-17.0.6
 
 - port_docker: check on Dockerfile
 - port_your_pc: any available port
+
+
 - run image
   ```docker run -p 8080:8080 coffeedigital```
 
