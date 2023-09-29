@@ -1,10 +1,14 @@
 # Read Me First
 
 ```shell
-./gradlew
+./gradlew bootRun
 ```
 1. Stop run by press `Ctrl + C`
-2. In IntellJ Convert to Gradle project
+
+http://localhost:8080/CoffeeDigital/swagger-ui/index.html
+
+http://localhost:8080/CoffeeDigital/actuator/health
+
 
 #### RUN TESTING
 Run Unit test

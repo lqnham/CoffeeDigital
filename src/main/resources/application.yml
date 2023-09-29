@@ -1,0 +1,45 @@
+spring:
+  profiles:
+    active: dev
+  autoconfigure:
+    exclude: org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration #add for case run without DB
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/your_database_name
+    username: root
+    password: root
+    initialize: false
+    initialSize: 0
+    timeBetweenEvictionRunsMillis: 5000
+    minEvictableIdleTimeMillis: 5000
+    minIdle: 0
+  jpa:
+    hibernate:
+      ddl-auto: none
+      dialect: org.hibernate.dialect.PostgreSQLDialect
+    properties:
+      hibernate:
+        hbm2ddl:
+          auto: none
+        temp:
+          use_jdbc_metadata_defaults: false
+  management:
+    endpoint:
+      health:
+        show-details: always
+    endpoints:
+      web:
+        exposure:
+          include: "*"
+
+server:
+  servlet:
+    context-path: /CoffeeDigital
+  port: 8080
+
+app:
+  logging-config:
+    max_time_execution_in_ms: 2000
+  third-party-config:
+    base_url: https://abc.xyz.sg
+
