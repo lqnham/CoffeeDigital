@@ -1,24 +1,66 @@
 # Read Me First
+## Requirements
+
+For building and running the application you need:
+- JDK 11
+- Docker
+- Gradle
+- Intellij
+
+### Run Spring Boot Application
+
+There are several ways to run a Spring Boot application on your local machine.
+One way is to execute the `main` method in the `CoffeeDigitalApplication` class from your IDE.
+
+Or run the following command in a terminal:
+
+```shell
+./gradlew bootRun
+```
+
+### Check app running
+
+```shell
+http://localhost:8080/CoffeeDigital/actuator/health
+```
+
+### API documentation
+
+```shell
+http://localhost:8080/CoffeeDigital/swagger-ui/index.html
+```
 
 To run graddle project: stay root folder and use command: 
 ```shell
 ./gradlew bootRun
 ```
-
 To terminate process use: press `Ctrl + C`
-
-The link below to access swagger:
-
-``` 
-http://localhost:8080/CoffeeDigital/swagger-ui/index.html
-
-http://localhost:8080/CoffeeDigital/actuator/health
-```
 
 #### RUN TESTING
 Run Unit test
 ```shell
 ./gradlew test
+```
+
+### Package
+
+Run the following command:
+
+```shell
+./gradlew clean build
+```
+
+or run without test:
+
+```shell
+./gradlew clean build -x test
+```
+
+After build succesfully, we will have a jar file at folder `build/libs`.
+To start spring appliation from this jar file, run the following command:
+
+```shell
+java -Dspring.profiles.active=dev -jar ./build/libs/CoffeeDigital-0.0.1-SNAPSHOT.jar
 ```
 
 # SETUP RUN ON MACOS

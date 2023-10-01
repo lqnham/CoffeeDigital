@@ -1,0 +1,23 @@
+version: '3'
+services:
+  app:
+    image: openjdk:17-jdk-slim-buster
+    container_name: my_app
+    working_dir: /app
+    volumes:
+      - .:/app
+    command: sh -c 'java -jar build/libs/CoffeeDigital-0.0.1-SNAPSHOT.jar'
+    ports:
+      - "8080:8080"
+    depends_on:
+      - db
+
+  db:
+    image: postgres:12.5
+    container_name: my_postgres
+    environment:
+      POSTGRES_DB: coffee_digital
+      POSTGRES_USER: coffee_admin
+      POSTGRES_PASSWORD: Admin@123
+    ports:
+      - "5432:5432"
