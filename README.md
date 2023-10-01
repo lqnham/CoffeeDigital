@@ -1,14 +1,19 @@
 # Read Me First
 
+To run graddle project: stay root folder and use command: 
 ```shell
 ./gradlew bootRun
 ```
-1. Stop run by press `Ctrl + C`
 
+To terminate process use: press `Ctrl + C`
+
+The link below to access swagger:
+
+``` 
 http://localhost:8080/CoffeeDigital/swagger-ui/index.html
 
 http://localhost:8080/CoffeeDigital/actuator/health
-
+```
 
 #### RUN TESTING
 Run Unit test
@@ -49,3 +54,4 @@ export PATH=$PATH:/Users/lqnham/Library/Java/JavaVirtualMachines/corretto-17.0.6
 - run image
   ```docker run -p 8080:8080 coffeedigital```
 
+![alt text](version_1.png)
