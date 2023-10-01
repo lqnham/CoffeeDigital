@@ -31,7 +31,8 @@ spring:
       web:
         exposure:
           include: "*"
-
+  flyway:
+    locations: db/migration,db/sampledata
 server:
   servlet:
     context-path: /CoffeeDigital
